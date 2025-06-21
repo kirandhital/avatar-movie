@@ -1,121 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avatar Movie card</title>
-</head>
-<style>
-    *{
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Avatar Movie Card</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
+
     body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        background: url(compose.webp), linear-gradient(100deg, #7ea6c3,#1d2d54);
-        background-size: 100%;
-        font-family: Arial, sans-serif;
-        background-color: #f0f0f0;
-        /* margin: 0;
-        padding: 20px; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(100deg, #7ea6c3, #1d2d54);
+      background-size: cover;
     }
+
     .container {
-        position: relative;
-        display: flex;
-        justify-content: center;
+      position: relative;
+      width: 90%;
+      max-width: 600px;
+      overflow: hidden;
+      border-radius: 10px;
+      background: linear-gradient(100deg, #7ea6c3, #1d2d54);
+      display: flex;
+      align-items: center;
+      transition: 0.5s;
+    }
+
+    .container:hover .content {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .container:hover img {
+      transform: translateX(30px);
+    }
+
+    img {
+      width: 250px;
+      height: auto;
+      transition: transform 0.5s;
+    }
+
+    .content {
+      flex: 1;
+      padding: 20px;
+      color: white;
+      opacity: 0;
+      transform: translateX(-30px);
+      transition: 0.5s ease-in-out;
+    }
+
+    .content h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .content p {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .content a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: white;
+      color: #263357;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 20px 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .content a:hover {
+      background-color: #ddd;
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 600px) {
+      .container {
+        flex-direction: column;
         align-items: center;
-/*         
-        max-width: 800px;
-        margin: auto; */
-    }
-    .container .card {
-        position: relative ;
-        width: 550px;
-        height: 350px;
-        margin: 50px;
-        display: flex;
-        transition: 0.5s;
-        justify-content: flex-start;
-        align-items: center;
-        background: linear-gradient(100deg, #7ea6c3,#1d2d54);   
-    }
-    .container .card .img{
-        position: absolute;
-        bottom: 50%;
-        left: 90%;
-        transform: translate(-50%);
-        height: 400px;
-        transition: 0.5s;
-        /* padding: 20px;
-        flex-grow: 1; */
-    }
-    .container .card:hover img{
-        left: 80%;
-        height: 400px;
-    }
-    .container .card .content {
-        position: relative;
-        width: 40%;
-        left: 40px;
-        padding: 20px 20px 20px 10px;
-        opacity: 0.9;
-        visibility: hidden;
-        transition: 0.5s;
-        /* height: 100%;
-        object-fit: cover;
-        border-radius: 10px; */
-    }
-    .container .card:hover .content {
-        visibility: visible;
-        left: 40px;
+        text-align: center;
+      }
+
+      .container:hover img {
+        transform: none;
+      }
+
+      .content {
         opacity: 1;
-    }
-    .container .card .content h2 {
-        font-size: 24px;
-        color: #fff;
-        text-transform: uppercase;
-        font-size: 16px;
-        line-height: 1em;
-        }
-    .container .card .content p {
-        font-size: 12px;
-        color:aliceblue;
-    }
-    .container .card .content a {
-        position: relative;
-        display: inline-block;
-        margin: 5px 0;
-        padding: 8px 12px;
-        background-color: white;
-        display: inline-block;
-        padding: 10px 20px;
-        margin-top: 10px;
-        color: #263357;
-        text-decoration: none;
-        font-weight: 700;
-        border-radius: 20px 5px 20px 5px;
-        transition: background-color 0.3s ease;
-    }
-    
+        transform: none;
+      }
 
-</style>
+      img {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
 <body>
-    <div class="container">
-        <div class ="card">
-            <div class="content"> 
-                <h2>Avatar: The Way of Water</h2>
-                <p>Release Date: December 16, 2022</p>
-                <p>Director: James Cameron</p>
-                <a href="https://www.imdb.com/title/tt1630029/" target="_blank">View on IMDb</a>
-             </div>
-             <img src ="avataar.jpg">
-        </div>
-    </div>    
-
+  <div class="container">
+    <!-- Replace with your image -->
+    <img src="https://m.media-amazon.com/images/S/pv-target-images/f0535dd61f56bddd6ee7f3bfb765645e45d78f373418ae37ee5103cf6eebbff0.jpg" alt="Avatar Poster" />
+    
+    <div class="content">
+      <h2>Avatar: The Way of Water</h2>
+      <p>Release Date: December 16, 2022</p>
+      <p>Director: James Cameron</p>
+      <a href="https://www.imdb.com/title/tt1630029/" target="_blank">View on IMDb</a>
+    </div>
+  </div>
 </body>
 </html>
