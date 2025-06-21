@@ -47,7 +47,7 @@
     .container .card .img{
         position: absolute;
         bottom: 50%;
-        left: 50%;
+        left: 90%;
         transform: translate(-50%);
         height: 400px;
         transition: 0.5s;
@@ -55,13 +55,13 @@
         flex-grow: 1; */
     }
     .container .card:hover img{
-        left: 70%;
-        height: 500px;
+        left: 80%;
+        height: 400px;
     }
     .container .card .content {
         position: relative;
         width: 40%;
-        left: 20px;
+        left: 40px;
         padding: 20px 20px 20px 10px;
         opacity: 0.9;
         visibility: hidden;
@@ -70,6 +70,37 @@
         object-fit: cover;
         border-radius: 10px; */
     }
+    .container .card:hover .content {
+        visibility: visible;
+        left: 40px;
+        opacity: 1;
+    }
+    .container .card .content h2 {
+        font-size: 24px;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 1em;
+        }
+    .container .card .content p {
+        font-size: 12px;
+        color:aliceblue;
+    }
+    .container .card .content a {
+        position: relative;
+        display: inline-block;
+        margin: 5px 0;
+        padding: 8px 12px;
+        background-color: white;
+        display: inline-block;
+        padding: 10px 20px;
+        margin-top: 10px;
+        color: #263357;
+        text-decoration: none;
+        font-weight: 700;
+        border-radius: 20px 5px 20px 5px;
+        transition: background-color 0.3s ease;
+    }
     
 
 </style>
@@ -77,20 +108,10 @@
     <div class="container">
         <div class ="card">
             <div class="content"> 
-                <h1>Avatar: The Way of Water</h1>
+                <h2>Avatar: The Way of Water</h2>
                 <p>Release Date: December 16, 2022</p>
                 <p>Director: James Cameron</p>
-                <p>Cast: Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang</p>
-                <p>Synopsis: Set more than a decade after the events of the first film, Avatar: The Way of Water explores the oceans of Pandora and the challenges faced by Jake Sully and Neytiri as they navigate new threats to their family and home.</p>
                 <a href="https://www.imdb.com/title/tt1630029/" target="_blank">View on IMDb</a>
-                <a href="https://www.rottentomatoes.com/m/avatar_the_way_of_water" target="_blank">View on Rotten Tomatoes</a>
-                <a href="#">Watch Trailer</a>
-                <a href="#">Buy Tickets</a>
-                <a href="#">More Info</a>
-                <a href="#">Share</a>
-                <a href="#">Add to Watchlist</a>
-                <a href="#">Rate</a>
-                <a href="#">Follow</a>
              </div>
              <img src ="avataar.jpg">
         </div>
