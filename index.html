@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avatar Movie card</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: url(compose.webp), linear-gradient(100deg, #7ea6c3,#1d2d54);
+        background-size: 100%;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 20px;
+    }
+    .container {
+        max-width: 800px;
+        margin: auto;
+    }
+    .card {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+    }
+    .content {
+        padding: 20px;
+        flex-grow: 1;
+    }
+    h1 {
+        margin-top: 0;
+    }
+    img {
+        width: 200px;
+        height: auto;
+    }
+    a {
+        display: inline-block;
+        margin-top: 10px;
+        color: #007bff;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class ="card">
+            <div class="content"> 
+                <h1>Avatar: The Way of Water</h1>
+                <p>Release Date: December 16, 2022</p>
+                <p>Director: James Cameron</p>
+                <p>Cast: Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang</p>
+                <p>Synopsis: Set more than a decade after the events of the first film, Avatar: The Way of Water explores the oceans of Pandora and the challenges faced by Jake Sully and Neytiri as they navigate new threats to their family and home.</p>
+                <a href="https://www.imdb.com/title/tt1630029/" target="_blank">View on IMDb</a>
+                <a href="https://www.rottentomatoes.com/m/avatar_the_way_of_water" target="_blank">View on Rotten Tomatoes</a>
+                <a href="#">Watch Trailer</a>
+                <a href="#">Buy Tickets</a>
+                <a href="#">More Info</a>
+                <a href="#">Share</a>
+                <a href="#">Add to Watchlist</a>
+                <a href="#">Rate</a>
+                <a href="#">Follow</a>
+             </div>
+             <img src ="avataar.jpg">
+        </div>
+    </div>    
+
+</body>
+</html>
